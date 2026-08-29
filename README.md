@@ -10,8 +10,12 @@ DeepSeek Harness 插件：非技术用户一键把环境、日志、配置与系
     打包为 DSH-时间-系统-主题-流水号.zip（纯 JS ZIP 写入，无第三方依赖），含 manifest.json（脱敏规则与命中统计）与中文 README.txt
 
 安装
+记住文件路径
+让deep seek帮你装
+提示词：
+文件路径
+请帮我安装dsh-diagnostic-bundle
 
-dsh plugin --profile <name> add dsh-diagnostic-bundle
 
 重启 dsh web 后，在会话头部出现「一键报错」按钮。
 可选配置
@@ -73,16 +77,8 @@ AI 深度分析与修复建议（可插拔 LLM）
     日志超过 10MB / 5 万行自动截断并注明；临时目录仅当前用户可读，取消即删除
     桌面不可写自动回退下载目录并提示；文件名冲突自动递增六位流水号
 
-开发
 
-# 本地打包验证
-npm pack
-# 安装到 profile（需重启 dsh web 生效）
-dsh plugin --profile web add ./dsh-diagnostic-bundle-1.0.0.tgz
 
-License
-
-MIT
 1.3.0：独立 AI 服务密钥管理 + 可执行修复
 独立 API Key（与 Harness 自身配置完全分离）
 

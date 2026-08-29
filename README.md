@@ -127,3 +127,4 @@ system.json → net 	与 network.json 同源的出站探测结果与代理摘要
     每个插件输出 status: ok | problem + 逐条 problems[{type, detail}]；末尾 summary{total, ok, problems, details} 供开发者快速定位。
     第五类受 Review 页勾选控制（取消勾选 → plugins.json 不进包，Tab 灰化「已排除」）；脱敏规则同样作用于 plugins.json（README、路径、报错中的密钥信息会被替换）。
     manifest.json 新增 items.plugins{included, problems, redactedHits}；README.txt 新增第 12 项说明。
+技术人员邮箱：158786846@qq.com

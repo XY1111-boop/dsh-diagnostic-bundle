@@ -1,0 +1,44 @@
+{
+  "name": "dsh-diagnostic-bundle",
+  "version": "1.3.3",
+  "description": "智能报错诊断包生成器：一键采集环境/日志/配置/系统状态，Worker 脱敏后打包到桌面（含 AI 诊断摘要与个人总结）",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ],
+      "platform": "web"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<your-org>/dsh-diagnostic-bundle.git"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "diagnostic",
+    "redaction",
+    "zip",
+    "support"
+  ],
+  "license": "MIT"
+}

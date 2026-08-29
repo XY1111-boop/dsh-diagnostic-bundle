@@ -1,0 +1,7 @@
+# dsh-diagnostic-bundle patch: mounts the diagnostic-bundle generator into a
+# dsh profile composition. Installed via `dsh plugin --profile <name> add
+# dsh-diagnostic-bundle` (the bundle manifest makes it a profile layer), or by
+# adding this insert to the profile's cordis.patch.yml manually.
+- insert:
+    - id: dsh-diagnostic-bundle
+      name: 'dsh-diagnostic-bundle'
